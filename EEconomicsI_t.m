@@ -18,8 +18,8 @@ plot(t,P-A,'r')
 hold on
 plot(t,A,'b') 
 hold on
-%plot(t,s)
-%hold on
+plot(t,s)
+hold on
 
-
+hehe
 
