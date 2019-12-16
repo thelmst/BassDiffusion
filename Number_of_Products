@@ -1,0 +1,32 @@
+
+% Group project for energy economics
+
+% Parameters
+%   tot_num_t1 -
+%    coinno - coefficientof innovators
+%    coimi - coefficient of imitators
+%    m - market potential
+%    t-1 - time t at t-1 years
+   
+ 
+function [time] = myfunc(tot_num_t1, coinno, coimi, m)
+    for time = 0
+       
+        if time = range[0:360:1] % Time range from year 0 to 3 in 360 months
+            Num_of_p = tot_num_t1(time-1) + coinno * (m - tot_num_t1(time-1)) + coimi * (tot_num_t1(time-1)/m) * (m - tot_num_t1(time-1));
+            time + 1
+            print(Num_of_p)
+        else
+            break
+        end
+    end          
+end
+% in callfunc müssen die Parameter noch definiert werden.
+% Dies geschiet außerhalb der Schleife
+
+tot_num_t1 = range(0:10)
+coinno = 
+coimi =
+m = 50000000000
+
+[time] = myfunc(tot_num_t1, coinno, coimi, m)
